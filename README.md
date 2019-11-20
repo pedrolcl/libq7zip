@@ -47,6 +47,9 @@ This library allows easy and comfortable file and resource compress and uncompre
     #include <q7z_extract.h>
     #include <q7z_facade.h>
 
+    [...]
+
+    Q7z::initSevenZ();
     QFile source(":///testdata.7z"); // embedded resource
     source.open(QIODevice::ReadOnly);
     Q7z::extractArchive(&source, QDir::tempPath());
