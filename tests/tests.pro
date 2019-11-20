@@ -1,3 +1,4 @@
+CONFIG -= debug_and_release debug_and_release_target
 TEMPLATE=app
 TARGET=q7ztest
 QT = core
@@ -11,3 +12,4 @@ LIBS += -L../q7z -lq7z
 
 RESOURCES += data.qrc
 SOURCES = testq7z.cpp
+

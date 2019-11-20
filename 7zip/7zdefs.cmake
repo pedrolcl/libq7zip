@@ -6,9 +6,9 @@ if (WIN32)
         ${7ZIP_BASE}/C
         ${7ZIP_BASE}/CPP )
 
-    add_definitions( -DWIN_LONG_PATH -D_CRT_SECURE_NO_WARNINGS )
+    add_definitions( -DWIN_LONG_PATH -D_CRT_SECURE_NO_WARNINGS -DUNICODE )
     if (MSVC)
-        add_compile_options("/Zc:strictStrings-")
+        add_compile_options(-nologo -Zc:wchar_t -FS -Zc:strictStrings -Zi)
     endif()
 endif()
 

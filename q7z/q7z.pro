@@ -1,3 +1,4 @@
+CONFIG -= debug_and_release debug_and_release_target
 TEMPLATE = lib
 INCLUDEPATH += . ..
 
@@ -28,7 +29,7 @@ SOURCES += \
 LIBS += -L../7zip -l7z
 
 win32 {
-    LIBS += -loleaut32 -luser32     # 7zip
+    LIBS += -loleaut32 -luser32 -ladvapi32
     win32-g++*:LIBS += -lmpr -luuid
     win32-g++*:QMAKE_CXXFLAGS += -Wno-missing-field-initializers
 }

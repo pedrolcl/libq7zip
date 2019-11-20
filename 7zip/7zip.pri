@@ -7,8 +7,8 @@ win32 {
         $$7ZIP_BASE/CPP
 
     DEFINES += WIN_LONG_PATH _CRT_SECURE_NO_WARNINGS
-    QMAKE_CXXFLAGS_RELEASE -= -Zc:strictStrings
-    QMAKE_CXXFLAGS_RELEASE_WITH_DEBUGINFO -= -Zc:strictStrings
+    #QMAKE_CXXFLAGS_RELEASE -= -Zc:strictStrings
+    #QMAKE_CXXFLAGS_RELEASE_WITH_DEBUGINFO -= -Zc:strictStrings
 }
 
 unix {
