@@ -1,6 +1,9 @@
 CONFIG -= debug_and_release debug_and_release_target
 QT = core
-TARGET = 7z
+
+android:TARGET = 7z_$${QT_ARCH}
+else:TARGET = 7z
+
 TEMPLATE = lib
 INCLUDEPATH += . ..
 CONFIG += staticlib

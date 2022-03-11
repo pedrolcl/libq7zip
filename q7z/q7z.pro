@@ -26,7 +26,9 @@ SOURCES += \
     q7z_facade.cpp \
     q7z_fileio.cpp
 
-LIBS += -L../7zip -l7z
+#android:message("android arch is $${QT_ARCH}")
+android:LIBS += -L../7zip -l7z_$${QT_ARCH}
+else:LIBS += -L../7zip -l7z
 
 win32 {
     LIBS += -loleaut32 -luser32 -ladvapi32
