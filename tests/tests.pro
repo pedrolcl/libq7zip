@@ -10,9 +10,8 @@ include(../7zip/7zip.pri)
 INCLUDEPATH += ../q7z
 
 #android:message("android arch is $${QT_ARCH}")
-android:LIBS += -L../7zip -l7z_$${QT_ARCH}
-else:LIBS += -L../7zip -l7z
+android:LIBS += -L../q7z -lq7z_$${QT_ARCH}
+else:LIBS += -L../q7z -lq7z
 
 RESOURCES += data.qrc
 SOURCES = testq7z.cpp
-
