@@ -25,9 +25,10 @@
 #include <Common/MyCom.h>
 #include <7zip/UI/Common/Update.h>
 
+#include <QStringList>
+
 QT_BEGIN_NAMESPACE
 class QFileDevice;
-class QStringList;
 QT_END_NAMESPACE
 
 namespace Q7z
