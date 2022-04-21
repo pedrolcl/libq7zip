@@ -37,7 +37,7 @@ namespace Q7z
         bool isDirectory = false;
         quint64 compressedSize = 0;
         quint64 uncompressedSize = 0;
-        QFile::Permissions permissions = static_cast<QFile::Permissions>(0);
+        QFile::Permissions permissions = QFile::Permissions();
     };
     Q7Z_EXPORT bool operator==(const File &lhs, const File &rhs);
 

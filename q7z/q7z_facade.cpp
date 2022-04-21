@@ -344,7 +344,7 @@ static quint32 getUInt32Property(IInArchive *archive, int index, int propId, qui
 static QFile::Permissions getPermissions(IInArchive *archive, int index, bool *hasPermissions)
 {
     quint32 attributes = getUInt32Property(archive, index, kpidAttrib, 0);
-    QFile::Permissions permissions = static_cast<QFile::Permissions>(0);
+    QFile::Permissions permissions = QFile::Permissions();
     if (attributes & FILE_ATTRIBUTE_UNIX_EXTENSION) {
         if (hasPermissions != nullptr)
             *hasPermissions = true;
