@@ -9,11 +9,9 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-if (WIN32)
-    find_package(Qt5 COMPONENTS Core Test WinExtras REQUIRED)
-else()
-    find_package(Qt5 COMPONENTS Core Test REQUIRED)
-endif()
+find_package(QT NAMES Qt5 Qt6 REQUIRED)
+
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core Test REQUIRED)
 
 add_subdirectory( 7zip )
 add_subdirectory( q7z )

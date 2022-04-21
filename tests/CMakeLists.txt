@@ -5,8 +5,8 @@ add_executable ( q7ztest
     testq7z.cpp )
 
 target_link_libraries ( q7ztest  
-    Qt5::Core 
-    Qt5::Test 
+    Qt${QT_VERSION_MAJOR}::Core 
+    Qt${QT_VERSION_MAJOR}::Test 
     q7z )
 
 target_include_directories ( q7ztest PRIVATE ../q7z )

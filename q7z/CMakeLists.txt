@@ -17,8 +17,4 @@ set ( q7z_SOURCES
 
 add_library ( q7z SHARED ${q7z_SOURCES})
 
-if (WIN32)
-    target_link_libraries ( q7z PRIVATE Qt5::Core Qt5::WinExtras 7z )
-else()
-    target_link_libraries ( q7z PRIVATE Qt5::Core 7z )
-endif()
+target_link_libraries ( q7z PRIVATE Qt${QT_VERSION_MAJOR}::Core 7z )
