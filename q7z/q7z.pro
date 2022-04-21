@@ -9,7 +9,6 @@ include(../7zip/7zip.pri)
 DEFINES += BUILD_LIB_Q7Z
 
 QT = core
-win32:QT += winextras
 
 HEADERS += \
     q7z_create.h \
