@@ -8,3 +8,7 @@ endif()
 
 add_library ( 7z STATIC $<TARGET_OBJECTS:obj7z> )
 set_target_properties( 7z PROPERTIES POSITION_INDEPENDENT_CODE ON)
+
+if (APPLE)
+    target_link_libraries(7z "-framework CoreFoundation")
+endif()

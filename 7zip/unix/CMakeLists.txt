@@ -14,6 +14,6 @@ include(${7ZIP_BASE}/CPP/myWindows/myWindows.cmake)
 include(${7ZIP_BASE}/CPP/Windows/Windows.cmake)
 
 add_library(obj7z OBJECT ${obj7z_SOURCES})
-get_target_property(QtCore_headers Qt5::Core INTERFACE_INCLUDE_DIRECTORIES)
+get_target_property(QtCore_headers Qt${QT_VERSION_MAJOR}::Core INTERFACE_INCLUDE_DIRECTORIES)
 target_include_directories(obj7z PRIVATE ${QtCore_headers})
 set_target_properties( obj7z PROPERTIES POSITION_INDEPENDENT_CODE ON)
