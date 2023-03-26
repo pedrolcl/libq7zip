@@ -1,9 +1,15 @@
 # libq7zip
 7-zip library and buildsystems for Qt based applications.
 
+[![Build and Test](https://github.com/pedrolcl/libq7zip/actions/workflows/cmake.yml/badge.svg)](https://github.com/pedrolcl/libq7zip/actions/workflows/cmake.yml)
+
 This repository contains source code from the [7-zip](https://www.7-zip.org) and [p7zip](http://p7zip.sourceforge.net) projects and some classes from the [Qt Installer Framework](https://doc.qt.io/qtinstallerframework/index.html), with CMake and Qmake buildsystems allowing to build static and dynamic libraries for most operating systems and platforms.
 
 This library allows easy and comfortable file and resource compress and uncompress using the 7z format in Qt applications. The following example snippets are taken from the library unit tests.
+
+The default is to build the library for Qt6. There is a cmake option: USE_QT5=ON to link to Qt5 instead.
+
+The unit tests are built by default. If you prefer to not do it, pass the cmake option BUILD_TESTING=OFF.
 
 ## compress files
 
